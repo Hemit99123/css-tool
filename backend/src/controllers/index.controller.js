@@ -3,6 +3,16 @@ import purgecss from '@fullhuman/postcss-purgecss';
 
 export const handlePostReq = async (req, res) => {
   try {
+    res.send('Web Ready CSS Tool API')
+    
+  } catch (error) {
+    console.error('Error', error);
+    res.status(500).send('Internal Server Error');
+  }
+};
+
+export const handleGetReq = async (req, res) => {
+  try {
     // Logging the files received
     console.log('Files received:', req.files);
 

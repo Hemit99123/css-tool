@@ -7,13 +7,14 @@ const router = express.Router();
 const storage = multer.memoryStorage()
 
 // Import controllers
-import { handlePostReq } from "../controllers/index.controller.js";
+import { handleGetReq, handlePostReq } from "../controllers/index.controller.js";
 
 // Configure multer for file uploads
 const upload = multer({ storage });
 
 
 // Define routes
+router.get("/", handleGetReq);
 router.post("/", /* our field for getting files */ upload.array('files'), handlePostReq);
 
 export default router;
