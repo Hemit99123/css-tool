@@ -1,7 +1,7 @@
 import postcss from 'postcss';
 import purgecss from '@fullhuman/postcss-purgecss';
 
-export const handlePostReq = async (req, res) => {
+export const handleGetReq = async (req, res) => {
   try {
     res.send('Web Ready CSS Tool API')
     
@@ -11,7 +11,7 @@ export const handlePostReq = async (req, res) => {
   }
 };
 
-export const handleGetReq = async (req, res) => {
+export const handlePostReq = async (req, res) => {
   try {
     // Logging the files received
     console.log('Files received:', req.files);
