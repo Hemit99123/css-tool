@@ -8,7 +8,7 @@ export const getPurgeCss = async (files) => {
     });
   
     try {
-      const response = await fetch(`/`, {
+      const response = await fetch(`https://css-tool-4luw-qdeyw0lur-hemit99123s-projects.vercel.app/`, {
         method: 'POST',
         body: formData,
       });
