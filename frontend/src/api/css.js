@@ -8,7 +8,7 @@ export const getPurgeCss = async (files) => {
     });
   
     try {
-      const response = await fetch(`https://css-tool.onrender.com/`, {
+      const response = await fetch(`https://css-api.adaptable.app/`, {
         method: 'POST',
         body: formData,
       });
